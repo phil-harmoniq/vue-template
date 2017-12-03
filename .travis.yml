@@ -1,9 +1,14 @@
-dist: trusty
+dist: xenail
 language: csharp
 mono: none
 dotnet: 2.0.3
+node_js: node
+
 before_script:
-- "ls -lhaF"
+- nvm install 8
+- nvm use 8
+- npm install
 
 script:
+- "npm install"
 - "dotnet build"
