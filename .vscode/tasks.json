@@ -1,29 +1,24 @@
 {
     "version": "2.0.0",
+    "type": "shell",
     "tasks": [
         {
             "label": "Build Web App",
             "command": "dotnet",
-            "type": "process",
-            "args": [ "build", "${workspaceFolder}/vue-template.csproj" ],
+            "args": [ "build" ],
             "problemMatcher": "$msCompile",
             "group": "build"
         },
         {
             "label": "Restore Nuget Packages",
             "command": "dotnet",
-            "type": "process",
             "args": [ "restore" ],
             "problemMatcher": "$msCompile",
             "group": "build"
         },
         {
             "label": "Install NPM Packages",
-            "command": "npm",
-            "type": "process",
-            "args": [
-                "install"
-            ],
+            "command": "cd ${workspaceRoot}/src && npm install",
             "problemMatcher": "$tsc-watch",
             "group": "build"
         }

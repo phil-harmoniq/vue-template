@@ -3,11 +3,11 @@
 }
 
 /* Highlighting rules for nav menu items */
-.main-nav li a.router-link-active,
-.main-nav li a.router-link-active:hover,
-.main-nav li a.router-link-active:focus {
-    background-color: #4189C7;
-    color: white;
+.main-nav li a.router-link-active {
+    &:hover, &:focus {
+        background-color: #aaaaaa;
+        color: black;
+    }
 }
 
 /* Keep the nav menu independent of scrolling and on top of other items */

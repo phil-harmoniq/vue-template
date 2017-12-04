@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,6 +19,7 @@ namespace vue_template.Controllers
         public IEnumerable<WeatherForecast> WeatherForecasts()
         {
             var rng = new Random();
+            Thread.Sleep(1500);
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 DateFormatted = DateTime.Now.AddDays(index).ToString("d"),
