@@ -5,31 +5,27 @@
             "label": "Build Web App",
             "command": "dotnet",
             "type": "process",
-            "args": [
-                "build",
-                "${workspaceFolder}/vue-template.csproj"
-            ],
-            "problemMatcher": "$msCompile"
+            "args": [ "build", "${workspaceFolder}/vue-template.csproj" ],
+            "problemMatcher": "$msCompile",
+            "group": "build"
         },
         {
             "label": "Restore Nuget Packages",
             "command": "dotnet",
             "type": "process",
-            "args": [
-                "build",
-                "${workspaceFolder}/vue-template.csproj"
-            ],
-            "problemMatcher": "$msCompile"
+            "args": [ "restore" ],
+            "problemMatcher": "$msCompile",
+            "group": "build"
         },
         {
             "label": "Install NPM Packages",
-            "command": "dotnet",
+            "command": "npm",
             "type": "process",
             "args": [
-                "build",
-                "${workspaceFolder}/vue-template.csproj"
+                "install"
             ],
-            "problemMatcher": "$msCompile"
+            "problemMatcher": "$tsc-watch",
+            "group": "build"
         }
     ]
 }
