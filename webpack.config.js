@@ -24,7 +24,7 @@ module.exports = (env) => {
             filename: '[name].js',
             publicPath: 'dist/'
         },
-        plugins: 
+        plugins: [
             new webpack.DefinePlugin({
                 'process.env': {
                     NODE_ENV: JSON.stringify(isDevBuild ? 'development' : 'production')
