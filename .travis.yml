@@ -10,5 +10,5 @@ before_script:
 - npm install
 
 script:
-- "npm install"
+- "npm install src"
 - "dotnet build"
