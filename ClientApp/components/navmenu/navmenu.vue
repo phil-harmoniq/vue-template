@@ -34,4 +34,4 @@
     </div>
 </template>
 
-<style lang="sass" src="./navmenu.scss" />
+<style lang="scss" src="./navmenu.scss" />
