@@ -5,14 +5,14 @@
         {
             "label": "Build Web App",
             "command": "dotnet",
-            "args": [ "build" ],
+            "args": [ "build", "${workspaceRoot}" ],
             "problemMatcher": "$msCompile",
             "group": "build"
         },
         {
             "label": "Restore Nuget Packages",
             "command": "dotnet",
-            "args": [ "restore" ],
+            "args": [ "restore", "${workspaceRoot}" ],
             "problemMatcher": "$msCompile",
             "group": "build"
         },
