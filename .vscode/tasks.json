@@ -18,7 +18,8 @@
         },
         {
             "label": "Install NPM Packages",
-            "command": "cd ${workspaceRoot}/src && npm install",
+            "command": "npm install",
+            "options": { "cwd": "${workspaceRoot}/src" },
             "problemMatcher": "$tsc-watch",
             "group": "build"
         }
