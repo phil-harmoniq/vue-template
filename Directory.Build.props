@@ -1,9 +1,10 @@
 <Project>
 
   <PropertyGroup>
+    <BuildPath>.vscode/build</BuildPath>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>  
-    <OutputPath>$(MSBuildThisFileDirectory)/.vscode/build/$(MSBuildProjectName)/bin/$(Configuration)</OutputPath>
-    <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)/.vscode/build/$(MSBuildProjectName)/obj</BaseIntermediateOutputPath>
+    <OutputPath>$(MSBuildThisFileDirectory)/$(BuildPath)/$(MSBuildProjectName)/bin/$(Configuration)</OutputPath>
+    <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)/$(BuildPath)/$(MSBuildProjectName)/obj</BaseIntermediateOutputPath>
   </PropertyGroup>
 
 </Project>

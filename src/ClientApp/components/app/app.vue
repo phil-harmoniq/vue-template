@@ -6,9 +6,10 @@
             </div>
             <div class="col-sm-9">
                 <router-view></router-view>
+                <error></error>
             </div>
         </div>
     </div>
 </template>
 
-<script lang="ts" src="./app.ts"></script>
+<script lang="ts" src="./app.ts" />

@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const bundleOutputDir = './wwwroot/dist';
+const PrerenderSpaPlugin = require('prerender-spa-plugin');
 
 module.exports = (env) => {
     const isDevBuild = !(env && env.prod);
@@ -33,7 +34,11 @@ module.exports = (env) => {
             new webpack.DllReferencePlugin({
                 context: __dirname,
                 manifest: require('./wwwroot/dist/vendor-manifest.json')
-            })
+            }),
+            new PrerenderSpaPlugin(
+                path.join['./wwwroot/dist'],
+                [ '/', '/home', '/error', '/counter', '/fetchdata' ]
+            )
         ].concat(isDevBuild ? [
             // Plugins that apply in development builds only
             new webpack.SourceMapDevToolPlugin({
