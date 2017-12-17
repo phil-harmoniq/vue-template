@@ -36,7 +36,7 @@ module.exports = (env) => {
                 manifest: require('./wwwroot/dist/vendor-manifest.json')
             }),
             new PrerenderSpaPlugin(
-                path.join['./wwwroot/dist'],
+                path.join( __dirname, './wwwroot/dist' ),
                 [ '/', '/home', '/error', '/counter', '/fetchdata' ]
             )
         ].concat(isDevBuild ? [
