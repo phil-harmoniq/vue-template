@@ -1,29 +1,13 @@
-FROM microsoft/dotnet:2.0.4-sdk-2.1.3-stretch
+FROM microsoft/dotnet:2.0.4-runtime-stretch
 
-# set up environment
+# set up network
 ENV ASPNETCORE_URLS http://+:80
 ENV ASPNETCORE_PKG_VERSION 2.0.3
 
-# set up node
-# See https://nodejs.org/dist/v6.11.3/SHASUMS256.txt.asc
-ENV NODE_VERSION 8.9.3
-ENV NODE_DOWNLOAD_URL https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz
-ENV NODE_DOWNLOAD_SHA 610705D45EB2846A9E10690678A078D9159E5F941487ACA20C6F53B33104358C
-
-RUN curl -SL "$NODE_DOWNLOAD_URL" --output nodejs.tar.gz \
-    && echo "$NODE_DOWNLOAD_SHA nodejs.tar.gz" | sha256sum -c - \
-    && tar -xzf "nodejs.tar.gz" -C /usr/local --strip-components=1 \
-    && rm nodejs.tar.gz \
-    && ln -s /usr/local/bin/node /usr/local/bin/nodejs \
-    # set up bower and gulp
-    && npm install -g bower gulp \
-    && echo '{ "allow_root": true }' > /root/.bowerrc
-
-# warmup NuGet package cache
-COPY packagescache.csproj /tmp/warmup/
-RUN dotnet restore /tmp/warmup/packagescache.csproj \
-      --source https://api.nuget.org/v3/index.json \
-      --verbosity quiet \
-    && rm -rf /tmp/warmup/
-
-WORKDIR /
+# set up the runtime store
+RUN for version in '2.0.0' '2.0.3'; do \
+        curl -o /tmp/runtimestore.tar.gz https://dist.asp.net/runtimestore/$version/linux-x64/aspnetcore.runtimestore.tar.gz \
+        && export DOTNET_HOME=$(dirname $(readlink $(which dotnet))) \
+        && tar -x -C $DOTNET_HOME -f /tmp/runtimestore.tar.gz \
+        && rm /tmp/runtimestore.tar.gz; \
+    done
