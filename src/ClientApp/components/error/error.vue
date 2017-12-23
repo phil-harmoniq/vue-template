@@ -1,6 +1,0 @@
-<template>
-    <div>
-        <h1 class="text-danger">Error.</h1>
-        <h2 class="text-danger">An error occurred while processing your request.</h2>
-    </div>
-</template>
