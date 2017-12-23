@@ -3,7 +3,6 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CheckerPlugin = require('awesome-typescript-loader').CheckerPlugin;
 const bundleOutputDir = './wwwroot/dist';
-const PrerenderSpaPlugin = require('prerender-spa-plugin');
 
 module.exports = (env) => {
     const isDevBuild = !(env && env.prod);

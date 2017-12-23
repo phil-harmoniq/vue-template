@@ -4,11 +4,13 @@
 	"recommendations": [
 		// Extension identifier format: ${publisher}.${name}. Example: vscode.csharp
 		"ms-vscode.csharp",
+		"k--kato.docomment",
 		"jchannon.csharpextensions",
 		"formulahendry.auto-close-tag",
 		"P-de-Jong.vscode-html-scss",
 		"mrmlnc.vscode-scss",
 		"octref.vetur",
-		"eamodio.gitlens"
+		"eamodio.gitlens",
+		"msjsdiag.debugger-for-chrome"
 	]
 }

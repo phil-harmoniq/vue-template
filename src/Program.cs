@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace LocusPromo.Portal.Web
+namespace Vue.Template
 {
     public class Program
     {

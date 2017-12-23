@@ -8,13 +8,15 @@
     "sourceMap": true,
     "skipDefaultLibCheck": true,
     "strict": true,
-    "types": ["webpack-env"],
+    "types": [
+      "webpack-env"
+    ],
     "typeRoots": [
-      "./LocusPromo.Portal.Web/node_modules/@types"
+      "./node_modules/@types"
     ]
   },
   "exclude": [
-      "bin",
-      "node_modules"
+    "bin",
+    "node_modules"
   ]
 }
