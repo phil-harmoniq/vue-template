@@ -8,7 +8,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">vue-template</a>
+                <a class="navbar-brand" href="/">ASP.NET Core + Vue.js</a>
             </div>
             <div class="clearfix"></div>
             <div class="navbar-collapse collapse">

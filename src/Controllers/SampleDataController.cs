@@ -5,7 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace LocusPromo.Portal.Web.Controllers
+namespace Vue.Template
 {
     [Route("api/[controller]")]
     public class SampleDataController : Controller
