@@ -238,3 +238,10 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+
+# Compiled Client-Side Resources
+dist/
+
+# NPM meta-data
+npm-shrinkwrap.json
+package-lock.json

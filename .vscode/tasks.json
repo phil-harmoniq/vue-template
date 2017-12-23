@@ -5,7 +5,7 @@
         {
             "label": "Build Web App",
             "command": "dotnet",
-            "args": [ "build", "${workspaceRoot}" ],
+            "args": [ "build", "${workspaceRoot}/vue-template" ],
             "problemMatcher": "$msCompile",
             "group": "build"
         },
@@ -18,8 +18,23 @@
         },
         {
             "label": "Install NPM Packages",
-            "command": "npm install",
+            "command": "npm",
+            "args": [ "install" ],
             "options": { "cwd": "${workspaceRoot}/src" },
+            "problemMatcher": "$tsc-watch",
+            "group": "build"
+        },
+        {
+            "label": "Build Local Docker Image",
+            "command": "docker",
+            "args": [ "build", "${workspaceRoot}", "-t", "vue-template:local" ],
+            "problemMatcher": "$tsc-watch",
+            "group": "build"
+        },
+        {
+            "label": "Run Local Docker Image",
+            "command": "docker",
+            "args": [ "run", "--rm", "-p", "5000:80", "vue-template:local" ],
             "problemMatcher": "$tsc-watch",
             "group": "build"
         }

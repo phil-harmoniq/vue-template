@@ -1,0 +1,14 @@
+{
+	// See http://go.microsoft.com/fwlink/?LinkId=827846
+	// for the documentation about the extensions.json format
+	"recommendations": [
+		// Extension identifier format: ${publisher}.${name}. Example: vscode.csharp
+		"ms-vscode.csharp",
+		"jchannon.csharpextensions",
+		"formulahendry.auto-close-tag",
+		"P-de-Jong.vscode-html-scss",
+		"mrmlnc.vscode-scss",
+		"octref.vetur",
+		"eamodio.gitlens"
+	]
+}

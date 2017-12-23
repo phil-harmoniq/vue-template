@@ -1,0 +1,7 @@
+.vscode
+node_modules
+*/node_modules
+npm-shrinkwrap.json
+*/npm-shrinkwrap.json
+package-lock.json
+*/package-lock.json

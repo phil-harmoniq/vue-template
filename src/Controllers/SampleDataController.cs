@@ -5,7 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace vue_template.Controllers
+namespace LocusPromo.Portal.Web.Controllers
 {
     [Route("api/[controller]")]
     public class SampleDataController : Controller
@@ -19,7 +19,7 @@ namespace vue_template.Controllers
         public IEnumerable<WeatherForecast> WeatherForecasts()
         {
             var rng = new Random();
-            Thread.Sleep(1500);
+            Thread.Sleep(2000);
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 DateFormatted = DateTime.Now.AddDays(index).ToString("d"),
