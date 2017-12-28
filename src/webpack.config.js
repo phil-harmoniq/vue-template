@@ -6,10 +6,6 @@ const bundleOutputDir = './wwwroot/dist';
 
 module.exports = (env) => {
     const isDevBuild = !(env && env.prod);
-    const extractSass = new ExtractTextPlugin({
-        filename: "[name].[contenthash].css",
-        disable: process.env.NODE_ENV === "development"
-    })
 
     return [{
         stats: { modules: false },
@@ -59,8 +55,7 @@ module.exports = (env) => {
             new webpack.DllReferencePlugin({
                 context: __dirname,
                 manifest: require('./wwwroot/dist/vendor-manifest.json')
-            }),
-            extractSass
+            })
         ].concat(isDevBuild ? [
             // Plugins that apply in development builds only
             new webpack.SourceMapDevToolPlugin({
