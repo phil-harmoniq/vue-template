@@ -7,10 +7,9 @@
 		"k--kato.docomment",
 		"jchannon.csharpextensions",
 		"formulahendry.auto-close-tag",
-		"P-de-Jong.vscode-html-scss",
+		"p-de-jong.vscode-html-scss",
 		"mrmlnc.vscode-scss",
 		"octref.vetur",
-		"eamodio.gitlens",
-		"msjsdiag.debugger-for-chrome"
+		"eamodio.gitlens"
 	]
 }
