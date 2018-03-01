@@ -10,7 +10,7 @@
             "request": "launch",
             "preLaunchTask": "Build Web App",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/.vscode/build/vue-template/bin/Debug/netcoreapp2.0/vue-template.dll",
+            "program": "${workspaceFolder}/src/bin/Debug/netcoreapp2.0/vue-template.dll",
             "args": [],
             "cwd": "${workspaceFolder}/src",
             "stopAtEntry": false,

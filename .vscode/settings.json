@@ -1,4 +1,14 @@
 {
+	"files.exclude": {
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.hg": true,
+		"**/CVS": true,
+		"**/.DS_Store": true,
+		"**/bin": true,
+		"**/obj": true,
+		"**/node_modules": true
+	},
 	"scss.showErrors": true,
 	"javascript.referencesCodeLens.enabled": true,
 	"typescript.referencesCodeLens.enabled": true,
