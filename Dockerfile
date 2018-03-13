@@ -1,5 +1,5 @@
 # Builder image
-FROM microsoft/aspnetcore-build AS builder
+FROM microsoft/aspnetcore-build:2.0-jessie AS builder
 
 # Make a cached layer for Nuget packages
 WORKDIR /vue-template
@@ -15,7 +15,7 @@ RUN dotnet publish -c Release -o out
 
 
 # Runtime image
-FROM microsoft/aspnetcore
+FROM microsoft/aspnetcore:2.0-jessie
 
 LABEL maintainer "Phil Hawkins"
 
